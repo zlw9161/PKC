@@ -1,27 +1,28 @@
 # PeakConv: Learning Peak Receptive Field for Radar Semantic Segmentation
 
-## Paper
+## Paper Info
 
 ![teaser_schema](./images/prf.png)
 
-[PeakConv: Learning Peak Receptive Field for Radar Semantic Segmentation], CVPR 2023, under-review.
+[PeakConv: Learning Peak Receptive Field for Radar Semantic Segmentation], CVPR 2023, accepted.
 
-[Liwen Zhang](https://github.com/zlw9161)
+Main contributors: [Liwen Zhang](https://github.com/zlw9161), [Xinyan Zhang](https://github.com/zxy1501434265), Youcheng Zhang
 
-This repository groups the implemetations of the PeakConv RSS-Net.
+This repository groups the implemetations of the PeakConv-based RSS-Net.
 
-The models are trained and tested on the [CARRADA dataset](https://arxiv.org/abs/2005.01456).
+The models are trained and tested on the [CARRADA dataset](https://arxiv.org/abs/2005.01456) and its calibrated version CARRADA-RAC, which is done by our team.
+The CARRADA-RAC code can be found at [CARRADA-RAC](https://github.com/zlw9161/CARRADA-RAC).
 
 The CARRADA dataset is available on Arthur Ouaknine's personal web page at this link: [https://arthurouaknine.github.io/codeanddata/carrada](https://arthurouaknine.github.io/codeanddata/carrada).
 
-If you find this code useful for your research, please cite [our paper](https://arxiv.org/abs/2103.16214):
+If you find this code useful for your research, please cite our paper:
 ```
 @InProceedings{zlw_2022_pkc,
-	       author = {Liwen, Zhang and Xinyan, Zhang and Youcheng, Zhang and Yufei, Guo and Yuanpei, Chen},
+	       author = {Liwen, Zhang and Xinyan, Zhang and Youcheng, Zhang and Yufei, Guo and Yuanpei, Chen and Xuhui, Huang and Zhe, Ma},
 	       title = {PeakConv: Learning Peak Receptive Field for Radar Semantic Segmentation},
-	       booktitle = {CVPR 2023 submitted},
-	       month = {November},
-	       year = {2022}
+	       booktitle = {CVPR 2023 accepted},
+	       month = {March},
+	       year = {2023}
 	       }
 ```
 ![Vanilla-PKC](./images/vanilla.png)
@@ -99,12 +100,10 @@ Note: the current implementation of this script will generate qualitative result
 
 
 ## Acknowledgements
-- The paper is under review, special thanks will be indicated after the final results
 - The Soft Dice loss is based on the code from <https://github.com/kornia/kornia/blob/master/kornia/losses/dice.py>
 - Thank [CARRADA dataset](https://arxiv.org/abs/2005.01456) for providing the Radar dataset.
 - Thank [MVRSS](https://arxiv.org/abs/2103.16214) for providing the basic model framework of multi-view RSS network. And we build our model using the basic framework of `mvrss` lib, our incremental modifications to the  `mvrss` code did not effect the TMVA-Net and MV-Net in MVRSS. 
-- The paper is submitted to CVPR 2023, other special thanks will be mentioned after the final results.
-
+- The paper is accepted by CVPR 2023. The camera-ready paper for PKC is coming soon, and we will provide the long extension version on arxiv.
 ## License
 The PKC repo is released under the Apache 2.0 license.
 
