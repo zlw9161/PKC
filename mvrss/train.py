@@ -4,7 +4,7 @@ import json
 from mvrss.utils.functions import count_params
 from mvrss.learners.initializer import Initializer
 from mvrss.learners.model import Model
-from mvrss.models import TMVANet, MVNet, MVANet, MVA_DCN, TMVA_DCN, TMVA_TDC, PKCIn, PKCOn, AdaPKC
+from mvrss.models import TMVANet, MVNet, MVANet, MVA_DCN, TMVA_DCN, TMVA_TDC, PKCIn, PKCOn
 
 
 def main():
@@ -36,9 +36,6 @@ def main():
     elif cfg['model'] == 'pkcin':
         net = PKCIn(n_classes=data['cfg']['nb_classes'],
                           n_frames=data['cfg']['nb_input_channels'])
-    elif cfg['model'] == 'adapkc':
-        net = AdaPKC(n_classes=data['cfg']['nb_classes'],
-                     n_frames=data['cfg']['nb_input_channels'])
     elif cfg['model'] == 'pkcon':
         net = PKCOn(n_classes=data['cfg']['nb_classes'],
                     n_frames=data['cfg']['nb_input_channels'])
