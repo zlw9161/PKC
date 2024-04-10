@@ -5,5 +5,4 @@ from .mva_dcn import MVA_DCN
 from .tmva_dcn import TMVA_DCN
 from .tmva_tdc import TMVA_TDC
 from .pkcin import PKCIn
-from .adapkc import AdaPKC
 from .pkcon import PKCOn
